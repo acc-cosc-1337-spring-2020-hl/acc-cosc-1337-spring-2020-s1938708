@@ -1,11 +1,11 @@
-//Write the include statement for types.h here
+#include "output.h"
+#include <iostream>
 
-//Write include for capturing input from keyboard and displaying output to screen
-
-
+using std::cout;
 
 int main() 
 {
+	cout << "Hello World!";
 
 	return 0;
 }
