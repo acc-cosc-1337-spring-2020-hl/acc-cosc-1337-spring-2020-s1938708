@@ -1,11 +1,8 @@
 #include "output.h"
-#include <iostream>
-
-using std::cout;
 
 int main() 
 {
-	cout << "Hello World!";
+	say_hello();
 
 	return 0;
 }
