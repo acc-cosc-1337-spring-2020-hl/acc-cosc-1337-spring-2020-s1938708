@@ -11,7 +11,7 @@ and displays the numbers to screen using an indexed for loop as follows: 9 10 99
 */
 void loop_vector_w_index(vector<int> nums)
 {
-	for (int i = 0; i < nums.size(); ++i)
+	for (int i = 0; i < nums.size(); ++i) //std::size_t
 	{
 		cout << nums[i] << "\n";
 		nums[i] = 0;
