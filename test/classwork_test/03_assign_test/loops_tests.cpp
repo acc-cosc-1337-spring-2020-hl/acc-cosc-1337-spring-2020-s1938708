@@ -6,3 +6,10 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
+TEST_CASE("Test factorial function")
+{
+	REQUIRE(factorial(0) == 0);
+	REQUIRE(factorial(3) == 6);
+	REQUIRE(factorial(4) == 24);
+	REQUIRE(factorial(5) == 120);
+}
