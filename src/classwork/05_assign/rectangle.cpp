@@ -8,15 +8,13 @@ has one public function area that returns the area of the rectangle, and one pri
 that calculates area of the rectangle.  The class has 3 int private variables area, width, and height.
 */
 
-/*int Rec::get_area()
-{
-	
-}*/
+Rect::Rect(int w, int h) : width{ w }, height{ h } {};
 
-/*int Rec::calculate_area(int w, int h)
+int Rect::get_area()const { return area; }
+
+int Rect::calculate_area(int width, int height)
 {
-	int area = w * h;
+	area = width * height;
 
 	return area;
-
-}*/
+}

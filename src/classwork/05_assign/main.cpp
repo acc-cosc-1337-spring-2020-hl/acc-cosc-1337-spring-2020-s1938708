@@ -1,9 +1,9 @@
 //write include statemetns
-#include "rectangle.h"
+/*#include "rectangle.h"
 #include<iostream>
 #include<vector>
 
-using std::cout; using std::vector;
+//using std::cout; using std::vector;
 
 /*
 Create a vector of rectangles
@@ -17,12 +17,6 @@ Iterate the vector and display the Area for each Rectangle on one line and the t
 */
 int main()
 {
-	vector<int> rects{ (4, 5, 20), (10, 10, 100), (100, 10, 1000) };
-
-	for (auto rec : rects)
-	{
-		cout << rec;
-	}
 
 	return 0;
 }
