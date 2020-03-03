@@ -6,6 +6,7 @@ using std::cout; using std::vector;
 
 int main()
 {
+	BankAccount a(50);
 	vector<BankAccount> accounts{ BankAccount(100), BankAccount(200), BankAccount(300) };
 
 	for (auto act : accounts)
