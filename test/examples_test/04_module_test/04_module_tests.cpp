@@ -71,3 +71,9 @@ TEST_CASE("Test default constructor open account with less $25.")
 	BankAccount account;
 	REQUIRE_THROWS_AS(account.open(21), InvalidAmount);
 }
+
+TEST_CASE("Test bank account get rate.")
+{
+	BankAccount account;
+	REQUIRE(account.get_rate() == .025);
+}

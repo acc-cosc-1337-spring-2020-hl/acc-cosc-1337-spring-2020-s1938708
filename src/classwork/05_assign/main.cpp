@@ -20,6 +20,9 @@ int main()
 	int total_area = 0;
 	vector<Rect> rects{Rect(4, 5), Rect(10, 10), Rect(100, 10)};
 
+	Rect a(4, 5);
+	cout << a;
+
 	cout << "The areas for the rectangles are: ";
 	for (auto recs : rects)
 	{
