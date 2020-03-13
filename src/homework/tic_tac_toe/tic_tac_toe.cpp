@@ -44,6 +44,7 @@ void TicTacToe::display_board() const
 	{
 		cout << pegs[i] << "|" << pegs[i+1] << "|" << pegs[i+2] << "\n";
 	}
+	cout << "\n";
 }
 
 void TicTacToe::set_next_player()
@@ -52,9 +53,9 @@ void TicTacToe::set_next_player()
 	{
 		player = "O";
 	}
-	else
+	else if(player == "O")
 	{
-		player == "X";
+		player = "X";
 	}
 }
 
