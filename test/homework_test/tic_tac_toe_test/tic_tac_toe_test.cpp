@@ -81,7 +81,10 @@ TEST_CASE("Test game over when board full")
 	REQUIRE(game.game_over() == true);
 }
 
-TEST_CASE("Test display board function")
+TEST_CASE("Test Mark Position accepts values from 1 to 9 only.")
 {
-
+	TicTacToe game;
+	game.start_game("X");
+	REQUIRE_THROWS_AS(game.mark_board(0), Error);
+	REQUIRE_THROWS_AS(game.mark_board(10), Error);
 }
