@@ -8,22 +8,22 @@ bool TicTacToe::game_over()
 
 void TicTacToe::start_game(string first_player)
 {
-	if (!(first_player == "X" || first_player == "O"))
-	{
-		throw Error("\nPlayer must be X or O.");
-	}
-	else
+	if (first_player == "X" || first_player == "O")
 	{
 		clear_board();
 		player = first_player;
+	}
+	else
+	{
+		throw Error("\nPlayer must be X or O.");
 	}
 }
 
 void TicTacToe::mark_board(int position)
 {
-	if (position <= 0 || position >= 10)
+	if (position <= 0 || position >= 10) //How am I supposed to check that the input isn't a char or double? I've seen solutions, but you've mentioned that you don't want solutions not learned in class to be used.
 	{
-		throw Error("\nPosition must be 1 to 9.");
+		throw Error("\nPosition must be 1 to 9: ");
 	}
 	else if (player == "")
 	{

@@ -4,15 +4,31 @@
 using std::cout; using std::cin;
 int main() 
 {
-	string choice;
+	string choice, player;
 	TicTacToe game;
 
-	game.start_game("X");
+	cout << "Tic Tac Toe by Simon.";
+
+	do
+	{
+		cout << "\nEnter 'X' or 'O' to start the game: ";
+		cin >> player;
+
+		try
+		{
+			game.start_game(player);
+			break;
+		}
+		catch (Error e)
+		{
+			cout << e.get_message();
+		}
+	} while (game.get_player() != "X" || game.get_player() != "O");
 
 	do
 	{
 		int num;
-		cout << "\nEnter a postion: ";
+		cout << "\nEnter a postion (1-9): ";
 		cin >> num;
 
 		try

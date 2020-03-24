@@ -1,7 +1,7 @@
 The system is: Windows - 10.0.18362 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/HostX64/x64/cl.exe 
-Build flags: 
+Build flags: /DWIN32;/D_WINDOWS;/W3
 Id flags:  
 
 The output was:
@@ -25,7 +25,7 @@ The C compiler identification is MSVC, found in "C:/Users/simon/source/repos/acc
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/HostX64/x64/cl.exe 
-Build flags: 
+Build flags: /DWIN32;/D_WINDOWS;/W3;/GR;/EHsc
 Id flags:  
 
 The output was:
@@ -50,32 +50,32 @@ The CXX compiler identification is MSVC, found in "C:/Users/simon/source/repos/a
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_5d7bb && [1/2] Building C object CMakeFiles\cmTC_5d7bb.dir\testCCompiler.c.obj
-[2/2] Linking C executable cmTC_5d7bb.exe
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_4684d && [1/2] Building C object CMakeFiles\cmTC_4684d.dir\testCCompiler.c.obj
+[2/2] Linking C executable cmTC_4684d.exe
 
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_884a8 && [1/2] Building C object CMakeFiles\cmTC_884a8.dir\CMakeCCompilerABI.c.obj
-[2/2] Linking C executable cmTC_884a8.exe
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9907b && [1/2] Building C object CMakeFiles\cmTC_9907b.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_9907b.exe
 
 
 
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_78437 && [1/2] Building CXX object CMakeFiles\cmTC_78437.dir\testCXXCompiler.cxx.obj
-[2/2] Linking CXX executable cmTC_78437.exe
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_aafd9 && [1/2] Building CXX object CMakeFiles\cmTC_aafd9.dir\testCXXCompiler.cxx.obj
+[2/2] Linking CXX executable cmTC_aafd9.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_fa133 && [1/2] Building CXX object CMakeFiles\cmTC_fa133.dir\CMakeCXXCompilerABI.cpp.obj
-[2/2] Linking CXX executable cmTC_fa133.exe
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d2b60 && [1/2] Building CXX object CMakeFiles\cmTC_d2b60.dir\CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_d2b60.exe
 
 
 
