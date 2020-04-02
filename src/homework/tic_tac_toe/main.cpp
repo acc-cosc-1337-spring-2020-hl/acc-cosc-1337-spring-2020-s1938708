@@ -39,7 +39,7 @@ int main()
 		{
 			cout << e.get_message();
 		}
-
+		game.display_board();
 		cout << "\nContinue Playing (Y/y)? ";
 		cin >> choice;
 

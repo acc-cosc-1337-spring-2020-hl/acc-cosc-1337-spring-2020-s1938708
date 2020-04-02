@@ -3,7 +3,26 @@
 
 bool TicTacToe::game_over()
 {
-	return check_board_full();
+	if (check_row_win() == true)
+	{
+		set_winner();
+		return check_row_win();
+	}
+	else if (check_column_win() == true)
+	{
+		set_winner();
+		return check_column_win();
+	}
+	/*else if (check_diagonal_win() == true)
+	{
+		set_winner();
+		return check_diagonal_win();
+	}*/
+	else if (check_board_full() == true)
+	{
+		winner = "C";
+		return check_board_full();
+	}
 }
 
 void TicTacToe::start_game(string first_player)
@@ -47,6 +66,64 @@ void TicTacToe::display_board() const
 	cout << "\n";
 }
 
+bool TicTacToe::check_column_win()
+{
+	//if (pegs.at(0) == "X" && pegs.at(3) == "X" && pegs.at(6) == "X" 
+		//|| pegs.at(0) == "O" && pegs.at(3) == "O" && pegs.at(6) == "O")
+	if (pegs[0, 3, 6] == "X" || pegs[0, 3, 6] == "O")
+	{
+		return true;
+	}
+	else if (pegs[1, 4, 7] == "X" || pegs[1, 4, 7] == "O")
+	{
+		return true;
+	}
+	else if (pegs[2, 5, 8] == "X" || pegs[2, 5, 8] == "O")
+	{
+		return true;
+	}
+	else { return false; }
+}
+
+bool TicTacToe::check_row_win()
+{
+	if (pegs[0, 1, 2] == "X" || pegs[0, 1, 2] == "O")
+	{
+		return true;
+	}
+	else if (pegs[3, 4, 5] == "X" || pegs[3, 4, 5] == "O")
+	{
+		return true;
+	}
+	else if (pegs[6, 7, 8] == "X" || pegs[6, 7, 8] == "O")
+	{
+		return true;
+	}
+	else { return false; }
+}
+
+/*bool TicTacToe::check_diagonal_win()
+{
+	if (pegs[0, 4, 8] == "X" || pegs[0, 4, 8] == "O")
+	{
+		return true;
+	}
+	else if (pegs[2, 4, 6] == "X" || pegs[2, 4, 6] == "O")
+	{
+		return true;
+	}
+	else { return false; }
+}*/
+
+void TicTacToe::set_winner()
+{
+	if (player == "X")
+	{
+		winner = "O";
+	}
+	else { winner = "X"; }
+}
+
 void TicTacToe::set_next_player()
 {
 	if (player == "X")
@@ -79,6 +156,8 @@ void TicTacToe::clear_board()
 		peg = " ";
 	}
 }
+
+string TicTacToe::get_winner() { return winner; }
 
 Error::Error(string msg) : message(msg) {};
 
