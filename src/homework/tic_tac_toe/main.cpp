@@ -11,38 +11,44 @@ int main()
 
 	do
 	{
-		cout << "\nEnter 'X' or 'O' to start the game: ";
-		cin >> player;
+		do
+		{
+			cout << "\nEnter 'X' or 'O' to start the game: ";
+			cin >> player;
 
-		try
-		{
-			game.start_game(player);
-			break;
-		}
-		catch (Error e)
-		{
-			cout << e.get_message();
-		}
-	} while (game.get_player() != "X" || game.get_player() != "O");
+			try
+			{
+				game.start_game(player);
+				break;
+			}
+			catch (Error e)
+			{
+				cout << e.get_message();
+			}
+		} while (game.get_player() != "X" || game.get_player() != "O");
 
-	do
-	{
-		int num;
-		cout << "\nEnter a postion (1-9): ";
-		cin >> num;
+		do
+		{
+			int num;
+			cout << "\nIt is player " << game.get_player() << "'s turn.";
+			cout << "\nEnter a postion (1-9): ";
+			cin >> num;
 
-		try
-		{
-			game.mark_board(num);
-		}
-		catch (Error e)
-		{
-			cout << e.get_message();
-		}
-		game.display_board();
-		cout << "\nContinue Playing (Y/y)? ";
+			try
+			{
+				game.mark_board(num);
+			}
+			catch (Error e)
+			{
+				cout << e.get_message();
+			}
+			game.display_board();
+		} while (game.game_over() == false);
+		
+		cout << "The winner is: " << game.get_winner();
+
+		cout << "\nPress [Q/q] to quit. Anything else to continue playing: ";
 		cin >> choice;
-
-	} while (choice == "Y" || choice == "y");
+	} while (choice != "Q" && choice != "q");
 	return 0;
 }
