@@ -129,7 +129,7 @@ bool TicTacToe::check_diagonal_win()
 	else { return false; }
 }
 
-void TicTacToe::set_winner()
+void TicTacToe::set_winner() 
 {
 	if (player == "X")
 	{
