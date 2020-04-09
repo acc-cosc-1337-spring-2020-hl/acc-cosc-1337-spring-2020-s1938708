@@ -9,7 +9,7 @@ class BankAccount
 public:
 	BankAccount() = default;
 	explicit BankAccount(int b) : balance{ b } {}
-	virtual int get_balance()const { return balance; }
+	virtual int get_balance()const = 0; //set = 0 makes is a pure virtual function
 	void deposit(int amount);
 	void withdraw(int amount);
 	void open(int amount);
