@@ -58,17 +58,6 @@ void TicTacToe::mark_board(int position)
 
 string TicTacToe::get_player()const { return player; }
 
-void TicTacToe::display_board() const
-{
-	cout << "\n\n";
-
-	for (int i = 0; i < 9; i += 3)
-	{
-		cout << pegs[i] << "|" << pegs[i+1] << "|" << pegs[i+2] << "\n";
-	}
-	cout << "\n";
-}
-
 bool TicTacToe::check_column_win()
 {
 	if (pegs.at(0) == "X" && pegs.at(3) == "X" && pegs.at(6) == "X"
@@ -171,7 +160,44 @@ void TicTacToe::clear_board()
 	}
 }
 
-string TicTacToe::get_winner() { return winner; }
+std::ostream& operator<<(std::ostream& out, const TicTacToe& a)
+{
+	out << "\n\n";
+
+	for (int i = 0; i < 9; i += 3)
+	{
+		cout << a.pegs[i] << "|" << a.pegs[i + 1] << "|" << a.pegs[i + 2] << "\n";
+	}
+	out << "\n";
+
+	return out;
+}
+
+std::istream& operator>>(std::istream& in, TicTacToe& a) //I took out the const in the second parameter. The code works, is there a security flaw that const is needed for? 
+{
+	int num;
+	do
+	{
+		cout << "\nIt is player " << a.get_player() << "'s turn.";
+		cout << "\nEnter a postion (1-9): ";
+		in >> num;
+		try
+		{
+			a.mark_board(num);
+		}
+		catch (Error e)
+		{
+			cout << e.get_message();
+		}
+		cout << a; //i put the cout here and not in main because It would only be called once there and
+				   //looped like the last version of this program.
+
+	} while (a.game_over() == false);
+
+	return in;
+}
+
+string TicTacToe::get_winner() const { return winner; }
 
 Error::Error(string msg) : message(msg) {};
 

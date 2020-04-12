@@ -14,8 +14,9 @@ public:
 	void start_game(string first_player);
 	void mark_board(int position);
 	string get_player()const;
-	void display_board() const;
-	string get_winner();
+	string get_winner() const;
+	friend std::ostream& operator<<(std::ostream& out, const TicTacToe& a);
+	friend std::istream& operator>>(std::istream& in, TicTacToe& a);
 
 private:
 	bool check_column_win();
