@@ -1,46 +1,79 @@
 #include "tic_tac_toe.h"
 #include "tic_tac_toe_manager.h"
-#include<iostream>
+#include <iostream>
 
-using std::cout; using std::cin;
-int main() 
+using std::cout; using std::cin; using std::string;
+
+int main()
 {
-	string choice, player;
-	TicTacToe game;
-	TicTacToe_Manager Manage;
-	int num;
+	int choice = 0;
+	TicTacToe_Manager game_manager;
+	do {
+		TicTacToe game;
+		string x_prompt = "X's TURN \n";
+		string o_prompt = "Os TURN\n";
+		string first_player;
 
-	cout << "Tic Tac Toe by Simon.";
-	do
-	{
-		do
-		{
-			cout << "\nEnter 'X' or 'O' to start the game: ";
-			cin >> player;
 
-			try
-			{
-				game.start_game(player);
-				break;
+
+		bool first_player_success = false;
+		while (!first_player_success) {
+			try {
+				cout << "Enter X or O to choose the first player \n";
+				cin >> first_player;
+				game.start_game(first_player);
+				cout << game;
+				first_player_success = true;
 			}
-			catch (Error e)
-			{
-				cout << e.get_message();
+			catch (Error &ex) {
+				cout << ex.get_message() << "\n";
+				cout << "try again \n";
 			}
-		} while (game.get_player() != "X" || game.get_player() != "O");
+		}
 
-		cin >> game;
-		
-		cout << "The winner is: " << game.get_winner();
+		while (!game.game_over()) {
+			if (game.get_player() == "X") {
+				cout << x_prompt;
+			}
+			else {
+				cout << o_prompt;
+			}
+			bool mark_board_success = false;
 
-		Manage.save_game(game);
+			while (!mark_board_success) {
 
+				try {
+					cin >> game;
+					mark_board_success = true;
 
-		cout << "\nPress [Q/q] to quit. Anything else to continue playing: ";
+				}
+				catch (Error &ex) {
+					cout << ex.get_message() << "\n";
+					cout << "try again \n";
+				}
+
+				cout << game;
+
+				if (game.game_over()) {
+					cout << "winner :" << game.get_winner() << "\n";
+				}
+
+			}
+
+			//mark_board_success = false;
+
+		}
+		game_manager.save_game(game);
+		cout << game_manager;
+		cout << "\n";
+		cout << "Enter 0 to continue the game \n";
 		cin >> choice;
-	} while (choice != "Q" && choice != "q");
+		if (choice != 0) {
+			cout << game_manager;
+		}
+		cout << "\n";
 
-	cout << Manage;
+	} while (choice == 0);
 
 	return 0;
 }
