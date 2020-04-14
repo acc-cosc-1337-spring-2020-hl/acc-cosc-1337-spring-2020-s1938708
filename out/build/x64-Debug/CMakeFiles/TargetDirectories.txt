@@ -23,6 +23,11 @@ C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Deb
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/04_module/01_bank/CMakeFiles/rebuild_cache.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/04_module/01_bank/CMakeFiles/test.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/04_module/01_bank/CMakeFiles/edit_cache.dir
+C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/09_module/CMakeFiles/ex_09_library.dir
+C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/09_module/CMakeFiles/rebuild_cache.dir
+C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/09_module/CMakeFiles/test.dir
+C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/09_module/CMakeFiles/ex_09_exe.dir
+C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/09_module/CMakeFiles/edit_cache.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/homework/CMakeFiles/rebuild_cache.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/homework/CMakeFiles/test.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/homework/CMakeFiles/edit_cache.dir
@@ -48,6 +53,10 @@ C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Deb
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/examples_test/04_module_test/CMakeFiles/rebuild_cache.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/examples_test/04_module_test/CMakeFiles/test.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/examples_test/04_module_test/CMakeFiles/edit_cache.dir
+C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/examples_test/09_module_test/CMakeFiles/edit_cache.dir
+C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/examples_test/09_module_test/CMakeFiles/ex_09_tests.dir
+C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/examples_test/09_module_test/CMakeFiles/rebuild_cache.dir
+C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/examples_test/09_module_test/CMakeFiles/test.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/homework_test/CMakeFiles/rebuild_cache.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/homework_test/CMakeFiles/test.dir
 C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/test/homework_test/CMakeFiles/edit_cache.dir
