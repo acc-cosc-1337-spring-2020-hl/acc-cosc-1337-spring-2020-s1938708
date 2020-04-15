@@ -1,0 +1,749 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						20
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						4,
+						18
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/classwork",
+					"childIndexes" : 
+					[
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/classwork"
+				},
+				{
+					"build" : "src/classwork/05_assign",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/classwork/05_assign",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "src/examples",
+					"childIndexes" : 
+					[
+						5,
+						7,
+						8
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/examples"
+				},
+				{
+					"build" : "src/examples/04_module",
+					"childIndexes" : 
+					[
+						6
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/examples/04_module"
+				},
+				{
+					"build" : "src/examples/04_module/01_bank",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "src/examples/04_module/01_bank",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "src/examples/09_module",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/examples/09_module",
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				},
+				{
+					"build" : "src/examples/11_module",
+					"childIndexes" : 
+					[
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module"
+				},
+				{
+					"build" : "src/examples/11_module/01_ref_pointers",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module/01_ref_pointers",
+					"targetIndexes" : 
+					[
+						9,
+						10
+					]
+				},
+				{
+					"build" : "src/examples/11_module/02_dynamic_memory",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module/02_dynamic_memory",
+					"targetIndexes" : 
+					[
+						11,
+						12
+					]
+				},
+				{
+					"build" : "src/examples/11_module/03_memory_leak",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module/03_memory_leak",
+					"targetIndexes" : 
+					[
+						13,
+						14
+					]
+				},
+				{
+					"build" : "src/examples/11_module/04_dangling_pointer",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module/04_dangling_pointer",
+					"targetIndexes" : 
+					[
+						15,
+						16
+					]
+				},
+				{
+					"build" : "src/examples/11_module/05_raii",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module/05_raii",
+					"targetIndexes" : 
+					[
+						17,
+						18
+					]
+				},
+				{
+					"build" : "src/examples/11_module/06_destructors",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module/06_destructors",
+					"targetIndexes" : 
+					[
+						19,
+						20
+					]
+				},
+				{
+					"build" : "src/examples/11_module/07_class_copy",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module/07_class_copy",
+					"targetIndexes" : 
+					[
+						21,
+						22
+					]
+				},
+				{
+					"build" : "src/examples/11_module/08_rule_of_3",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module/08_rule_of_3",
+					"targetIndexes" : 
+					[
+						23,
+						24
+					]
+				},
+				{
+					"build" : "src/examples/11_module/09_rule_of_5",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/examples/11_module/09_rule_of_5",
+					"targetIndexes" : 
+					[
+						25,
+						26
+					]
+				},
+				{
+					"build" : "src/homework",
+					"childIndexes" : 
+					[
+						19
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/homework"
+				},
+				{
+					"build" : "src/homework/tic_tac_toe",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 18,
+					"projectIndex" : 0,
+					"source" : "src/homework/tic_tac_toe",
+					"targetIndexes" : 
+					[
+						28,
+						29
+					]
+				},
+				{
+					"build" : "test",
+					"childIndexes" : 
+					[
+						21,
+						23,
+						27
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test"
+				},
+				{
+					"build" : "test/classwork_test",
+					"childIndexes" : 
+					[
+						22
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 20,
+					"projectIndex" : 0,
+					"source" : "test/classwork_test"
+				},
+				{
+					"build" : "test/classwork_test/05_assign_test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 0,
+					"source" : "test/classwork_test/05_assign_test",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "test/examples_test",
+					"childIndexes" : 
+					[
+						24,
+						25,
+						26
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 20,
+					"projectIndex" : 0,
+					"source" : "test/examples_test"
+				},
+				{
+					"build" : "test/examples_test/04_module_test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 23,
+					"projectIndex" : 0,
+					"source" : "test/examples_test/04_module_test",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "test/examples_test/09_module_test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 23,
+					"projectIndex" : 0,
+					"source" : "test/examples_test/09_module_test",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "test/examples_test/11_module_test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 23,
+					"projectIndex" : 0,
+					"source" : "test/examples_test/11_module_test",
+					"targetIndexes" : 
+					[
+						27
+					]
+				},
+				{
+					"build" : "test/homework_test",
+					"childIndexes" : 
+					[
+						28
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 20,
+					"projectIndex" : 0,
+					"source" : "test/homework_test"
+				},
+				{
+					"build" : "test/homework_test/tic_tac_toe_test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 27,
+					"projectIndex" : 0,
+					"source" : "test/homework_test/tic_tac_toe_test",
+					"targetIndexes" : 
+					[
+						30
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28
+					],
+					"name" : "cosc1337",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "cw_05_exe::@42d74d72be3515c0d5fd",
+					"jsonFile" : "target-cw_05_exe-Debug-a1c52ba10bddf81774cf.json",
+					"name" : "cw_05_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "cw_05_library::@42d74d72be3515c0d5fd",
+					"jsonFile" : "target-cw_05_library-Debug-b169d68f956cda9c9361.json",
+					"name" : "cw_05_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "cw_05_tests::@b0b2bc37907f23764cbf",
+					"jsonFile" : "target-cw_05_tests-Debug-6f25e42272809a4e422b.json",
+					"name" : "cw_05_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ex_04_01_exe::@4e2faa1e2196244484c0",
+					"jsonFile" : "target-ex_04_01_exe-Debug-733ac209fd308e37c6f6.json",
+					"name" : "ex_04_01_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ex_04_01_library::@4e2faa1e2196244484c0",
+					"jsonFile" : "target-ex_04_01_library-Debug-8ac0434329c5c99b6a30.json",
+					"name" : "ex_04_01_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "ex_04_tests::@a6224bf2190e93d7f735",
+					"jsonFile" : "target-ex_04_tests-Debug-ad42a4a10220f882a340.json",
+					"name" : "ex_04_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "ex_09_exe::@05845201bdb5b45f3150",
+					"jsonFile" : "target-ex_09_exe-Debug-91114c180484722d57b9.json",
+					"name" : "ex_09_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "ex_09_library::@05845201bdb5b45f3150",
+					"jsonFile" : "target-ex_09_library-Debug-b3c3a46f3edf935d0014.json",
+					"name" : "ex_09_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 25,
+					"id" : "ex_09_tests::@86bef26d1a6561e289b3",
+					"jsonFile" : "target-ex_09_tests-Debug-65ff06492d494f1db003.json",
+					"name" : "ex_09_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ex_11_01_exe::@f74c5d75aa62b41ad962",
+					"jsonFile" : "target-ex_11_01_exe-Debug-e12415e43e1d816b10e7.json",
+					"name" : "ex_11_01_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ex_11_01_library::@f74c5d75aa62b41ad962",
+					"jsonFile" : "target-ex_11_01_library-Debug-e1060138fa2c50a84786.json",
+					"name" : "ex_11_01_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ex_11_02_exe::@7c6b39c74d7c417f1a5d",
+					"jsonFile" : "target-ex_11_02_exe-Debug-b766e2f5f9509b2c7e7b.json",
+					"name" : "ex_11_02_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ex_11_02_library::@7c6b39c74d7c417f1a5d",
+					"jsonFile" : "target-ex_11_02_library-Debug-29ad17dd8955ce0da6b2.json",
+					"name" : "ex_11_02_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "ex_11_03_exe::@2bde47d0071f36c491ae",
+					"jsonFile" : "target-ex_11_03_exe-Debug-0333c3afb40592f01714.json",
+					"name" : "ex_11_03_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "ex_11_03_library::@2bde47d0071f36c491ae",
+					"jsonFile" : "target-ex_11_03_library-Debug-50dff9b9605f7b64fb48.json",
+					"name" : "ex_11_03_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "ex_11_04_exe::@7abc6a34784a3b4baf5a",
+					"jsonFile" : "target-ex_11_04_exe-Debug-cec51f880c6fa3195ce4.json",
+					"name" : "ex_11_04_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "ex_11_04_library::@7abc6a34784a3b4baf5a",
+					"jsonFile" : "target-ex_11_04_library-Debug-71cb44aa1b511dfbaa01.json",
+					"name" : "ex_11_04_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "ex_11_05_exe::@515feef08d2f847b1529",
+					"jsonFile" : "target-ex_11_05_exe-Debug-51349ac671ce3cc8805d.json",
+					"name" : "ex_11_05_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "ex_11_05_library::@515feef08d2f847b1529",
+					"jsonFile" : "target-ex_11_05_library-Debug-1093cd5230bfd67ab1fb.json",
+					"name" : "ex_11_05_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "ex_11_06_exe::@556e8695f46f3d91bef7",
+					"jsonFile" : "target-ex_11_06_exe-Debug-0de7559e08ad67c20434.json",
+					"name" : "ex_11_06_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "ex_11_06_library::@556e8695f46f3d91bef7",
+					"jsonFile" : "target-ex_11_06_library-Debug-2f652901f4491a8d7b3d.json",
+					"name" : "ex_11_06_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "ex_11_07_exe::@625a66acf9acefce1a72",
+					"jsonFile" : "target-ex_11_07_exe-Debug-188ea022c9f1a75ec65c.json",
+					"name" : "ex_11_07_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "ex_11_07_library::@625a66acf9acefce1a72",
+					"jsonFile" : "target-ex_11_07_library-Debug-94ef7f043aa8dac4f49e.json",
+					"name" : "ex_11_07_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "ex_11_08_exe::@cdb18a3ba04e1d66e41f",
+					"jsonFile" : "target-ex_11_08_exe-Debug-e3e73d43734a2c188cae.json",
+					"name" : "ex_11_08_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "ex_11_08_library::@cdb18a3ba04e1d66e41f",
+					"jsonFile" : "target-ex_11_08_library-Debug-06e86496da18c79ce511.json",
+					"name" : "ex_11_08_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "ex_11_09_exe::@7c0014683431226384c4",
+					"jsonFile" : "target-ex_11_09_exe-Debug-fdde03ac275671e3d549.json",
+					"name" : "ex_11_09_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "ex_11_09_library::@7c0014683431226384c4",
+					"jsonFile" : "target-ex_11_09_library-Debug-37025ad6d45aee65d066.json",
+					"name" : "ex_11_09_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 26,
+					"id" : "ex_11_tests::@b17cab5059280372289d",
+					"jsonFile" : "target-ex_11_tests-Debug-2bbe1371eaa9d5ac4fe9.json",
+					"name" : "ex_11_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "tic_tac_toe_exe::@0f375f8d095c1e385e30",
+					"jsonFile" : "target-tic_tac_toe_exe-Debug-031856d27ee5e9acc729.json",
+					"name" : "tic_tac_toe_exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "tic_tac_toe_library::@0f375f8d095c1e385e30",
+					"jsonFile" : "target-tic_tac_toe_library-Debug-0855c4d34d0d81a20207.json",
+					"name" : "tic_tac_toe_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 28,
+					"id" : "tic_tac_toe_tests::@d7f7d0a85a58b61fbc93",
+					"jsonFile" : "target-tic_tac_toe_tests-Debug-807988bd76e306926fd5.json",
+					"name" : "tic_tac_toe_tests",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug",
+		"source" : "C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

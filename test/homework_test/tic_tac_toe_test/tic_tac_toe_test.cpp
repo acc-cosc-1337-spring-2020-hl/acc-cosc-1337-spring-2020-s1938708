@@ -6,7 +6,7 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("Test game over")
+/*TEST_CASE("Test game over")
 {
 	TicTacToe game;
 	game.start_game("X");
@@ -235,4 +235,4 @@ TEST_CASE("Test win diagonally from bottom left")
 	board.mark_board(3);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
-}
+}*/

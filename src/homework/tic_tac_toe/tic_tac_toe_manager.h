@@ -6,7 +6,7 @@
 #include<vector>
 #include<iostream>
 
-using std::string;
+using std::string; using std::reference_wrapper;
 
 class TicTacToe_Manager : public TicTacToe
 {
@@ -15,7 +15,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, const TicTacToe_Manager& manager);
 	void get_winner_total(int& o, int& w, int& t);
 private:
-	std::vector<TicTacToe> games ;
+	std::vector<reference_wrapper<TicTacToe>> games;
 	int o_win = { 0 };
 	int x_win = { 0 };
 	int tie = { 0 };

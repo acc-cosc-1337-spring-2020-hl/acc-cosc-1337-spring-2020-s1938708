@@ -1,4 +1,6 @@
 #include "tic_tac_toe.h"
+#include "tic_tac_toe_3.h"
+#include "tic_tac_toe_4.h"
 #include "tic_tac_toe_manager.h"
 #include <iostream>
 
@@ -15,7 +17,6 @@ int main()
 		string first_player;
 
 
-
 		bool first_player_success = false;
 		while (!first_player_success) {
 			try {
@@ -27,7 +28,7 @@ int main()
 			}
 			catch (Error &ex) {
 				cout << ex.get_message() << "\n";
-				cout << "try again \n";
+				cout << "Try again \n";
 			}
 		}
 
@@ -77,3 +78,62 @@ int main()
 
 	return 0;
 }
+
+/*int main()
+{
+	string player;
+	TicTacToe_Manager Manage;
+	int num, choice, game_choice;
+
+	cout << "Tic Tac Toe by Simon.";
+
+	do
+	{
+		std::vector<reference_wrapper<TicTacToe>> games{};
+
+		cout << "Choose either \'3\' for TicTacToe 3 or \'4\' for TicTacToe 4: ";
+		cin >> game_choice;
+		
+		if (game_choice == 3) 
+		{
+			Tic_Tac_Toe_3 game3;
+			games.push_back(game3);
+		}
+		else if (game_choice == 4)
+		{
+			Tic_Tac_Toe_4 game4;
+			games.push_back(game4);
+		}
+
+		bool first_player_success = false;
+		do
+		{
+			cout << "\nEnter 'X' or 'O' to start the game: ";
+			cin >> player;
+			try
+			{
+				.start_game(player);
+				first_player_success = true;
+				break;
+			}
+			catch (Error e)
+			{
+				cout << e.get_message();
+			}
+		} while (!first_player_success);
+
+		cin >> game;
+
+		cout << "The winner is: " << game.get_winner();
+
+		Manage.save_game(game);
+
+
+		cout << "\nPress 0 to continue playing: ";
+		cin >> choice;
+	} while (choice == 0);
+
+	cout << Manage;
+
+	return 0;
+}*/

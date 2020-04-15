@@ -58,65 +58,11 @@ void TicTacToe::mark_board(int position)
 
 string TicTacToe::get_player()const { return player; }
 
-bool TicTacToe::check_column_win()
-{
-	if (pegs.at(0) == "X" && pegs.at(3) == "X" && pegs.at(6) == "X"
-		|| pegs.at(0) == "O" && pegs.at(3) == "O" && pegs.at(6) == "O")
-	{
-		return true;
-	}
+bool TicTacToe::check_column_win() { return false; }
 
-	else if (pegs.at(1) == "X" && pegs.at(4) == "X" && pegs.at(7)== "X"
-		     || pegs.at(1) == "O" && pegs.at(4) == "O" && pegs.at(7) == "O")
-	{
-		return true;
-	}
+bool TicTacToe::check_row_win() { return false; }
 
-	else if (pegs.at(2) == "X" && pegs.at(5) == "X" && pegs.at(8) == "X"
-		     || pegs.at(2) == "O" && pegs.at(5) == "O" && pegs.at(8) == "O")
-	{
-		return true;
-	}
-	else { return false; }
-}
-
-bool TicTacToe::check_row_win()
-{
-	if (pegs.at(0) == "X" && pegs.at(1) == "X" && pegs.at(2) == "X"
-		|| pegs.at(0) == "O" && pegs.at(1) == "O" && pegs.at(2) == "O")
-	{
-		return true;
-	}
-
-	else if (pegs.at(3) == "X" && pegs.at(4) == "X" && pegs.at(5) == "X"
-		     || pegs.at(3) == "O" && pegs.at(4) == "O" && pegs.at(5) == "O")
-	{
-		return true;
-	}
-
-	else if (pegs.at(6) == "X" && pegs.at(7) == "X" && pegs.at(8) == "X"
-		     || pegs.at(6) == "O" && pegs.at(7) == "O" && pegs.at(8) == "O")
-	{
-		return true;
-	}
-	else { return false; }
-}
-
-bool TicTacToe::check_diagonal_win()
-{
-	if (pegs.at(0) == "X" && pegs.at(4) == "X" && pegs.at(8) == "X"
-		|| pegs.at(0) == "O" && pegs.at(4) == "O" && pegs.at(8) == "O")
-	{
-		return true;
-	}
-
-	else if (pegs.at(6) == "X" && pegs.at(4) == "X" && pegs.at(2) == "X"
-		|| pegs.at(6) == "O" && pegs.at(4) == "O" && pegs.at(2) == "O")
-	{
-		return true;
-	}
-	else { return false; }
-}
+bool TicTacToe::check_diagonal_win() { return false; }
 
 void TicTacToe::set_winner() 
 {
@@ -163,12 +109,22 @@ void TicTacToe::clear_board()
 std::ostream& operator<<(std::ostream& out, const TicTacToe& a)
 {
 	out << "\n\n";
-
-	for (int i = 0; i < 9; i += 3)
+	if (a.pegs.size() == 9)
 	{
-		cout << a.pegs[i] << "|" << a.pegs[i + 1] << "|" << a.pegs[i + 2] << "\n";
+		for (int i = 0; i < 9; i += 3)
+		{
+			cout << a.pegs[i] << "|" << a.pegs[i + 1] << "|" << a.pegs[i + 2] << "\n";
+		}
+		out << "\n";
 	}
-	out << "\n";
+	else if (a.pegs.size() == 16)
+	{
+		for (int i = 0; i < 16; i += 4)
+		{
+			cout << a.pegs[i] << "|" << a.pegs[i + 1] << "|" << a.pegs[i + 2] << a.pegs[i + 3] << "\n";
+		}
+		out << "\n";
+	}
 
 	return out;
 }
@@ -176,23 +132,44 @@ std::ostream& operator<<(std::ostream& out, const TicTacToe& a)
 std::istream& operator>>(std::istream& in, TicTacToe& a) //I took out the const in the second parameter. The code works, is there a security flaw that const is needed for? 
 {
 	int num;
-	do
+	if (a.pegs.size() == 9)
 	{
-		cout << "\nIt is player " << a.get_player() << "'s turn.";
-		cout << "\nEnter a postion (1-9): ";
-		in >> num;
-		try
+		do
 		{
-			a.mark_board(num);
-		}
-		catch (Error e)
-		{
-			cout << e.get_message();
-		}
-		cout << a; //i put the cout here and not in main because It would only be called once there and
-				   //looped like the last version of this program.
+			cout << "\nIt is player " << a.get_player() << "'s turn.";
+			cout << "\nEnter a postion (1-9): ";
+			in >> num;
+			try
+			{
+				a.mark_board(num);
+			}
+			catch (Error e)
+			{
+				cout << e.get_message();
+			}
+			cout << a;
 
-	} while (a.game_over() == false);
+		} while (a.game_over() == false);
+	}
+	if (a.pegs.size() == 16)
+	{
+		do
+		{
+			cout << "\nIt is player " << a.get_player() << "'s turn.";
+			cout << "\nEnter a postion (1-16): ";
+			in >> num;
+			try
+			{
+				a.mark_board(num);
+			}
+			catch (Error e)
+			{
+				cout << e.get_message();
+			}
+			cout << a;
+
+		} while (a.game_over() == false);
+	}
 
 	return in;
 }
