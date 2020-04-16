@@ -6,7 +6,7 @@
 
 using std::cout; using std::cin; using std::string;
 
-int main()
+/*int main()
 {
 	int choice = 0;
 	TicTacToe_Manager game_manager;
@@ -77,9 +77,9 @@ int main()
 	} while (choice == 0);
 
 	return 0;
-}
+}*/
 
-/*int main()
+int main()
 {
 	string player;
 	TicTacToe_Manager Manage;
@@ -89,7 +89,7 @@ int main()
 
 	do
 	{
-		std::vector<reference_wrapper<TicTacToe>> games{};
+		vector<reference_wrapper<TicTacToe>> games{};
 
 		cout << "Choose either \'3\' for TicTacToe 3 or \'4\' for TicTacToe 4: ";
 		cin >> game_choice;
@@ -136,4 +136,4 @@ int main()
 	cout << Manage;
 
 	return 0;
-}*/
+}

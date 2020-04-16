@@ -34,6 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/03_module/cmake_install.cmake")
   include("C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/04_module/cmake_install.cmake")
   include("C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/09_module/cmake_install.cmake")
   include("C:/Users/simon/source/repos/acc-cosc-1337-spring-2020-s1938708/out/build/x64-Debug/src/examples/11_module/cmake_install.cmake")
