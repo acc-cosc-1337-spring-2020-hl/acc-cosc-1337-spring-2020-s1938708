@@ -2,7 +2,7 @@
 #include"tic_tac_toe_manager.h"
 
 
-void TicTacToe_Manager::save_game(const TicTacToe b)
+void TicTacToe_Manager::save_game(TicTacToe b)
 {
 	games.push_back(b);
 	update_winner_count(b.get_winner());

@@ -11,7 +11,7 @@ using std::string; using std::reference_wrapper; using std::vector;
 class TicTacToe_Manager : public TicTacToe
 {
 public:
-	void save_game(const TicTacToe b);
+	void save_game(TicTacToe b);
 	friend std::ostream& operator<<(std::ostream& out, const TicTacToe_Manager& manager);
 	void get_winner_total(int& o, int& w, int& t);
 private:

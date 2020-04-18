@@ -41,18 +41,37 @@ void TicTacToe::start_game(string first_player)
 
 void TicTacToe::mark_board(int position)
 {
-	if (position <= 0 || position >= 10) //How am I supposed to check that the input isn't a char or double? I've seen solutions, but you've mentioned that you don't want solutions not learned in class to be used.
+	if (pegs.size() == 9)
 	{
-		throw Error("\nPosition must be 1 to 9.");
+		if (position <= 0 || position >= 10) //How am I supposed to check that the input isn't a char or double? I've seen solutions, but you've mentioned that you don't want solutions not learned in class to be used.
+		{
+			throw Error("\nPosition must be 1 to 9.");
+		}
+		else if (player == "")
+		{
+			throw Error("\nMust start game first.");
+		}
+		else
+		{
+			pegs[position - 1] = player;
+			set_next_player();
+		}
 	}
-	else if (player == "")
+	else if (pegs.size() == 16)
 	{
-		throw Error("\nMust start game first.");
-	}
-	else
-	{
-		pegs[position - 1] = player;
-		set_next_player();
+		if (position <= 0 || position >= 17) //How am I supposed to check that the input isn't a char or double? I've seen solutions, but you've mentioned that you don't want solutions not learned in class to be used.
+		{
+			throw Error("\nPosition must be 1 to 16.");
+		}
+		else if (player == "")
+		{
+			throw Error("\nMust start game first.");
+		}
+		else
+		{
+			pegs[position - 1] = player;
+			set_next_player();
+		}
 	}
 }
 
@@ -151,7 +170,7 @@ std::istream& operator>>(std::istream& in, TicTacToe& a) //I took out the const 
 
 		} while (a.game_over() == false);
 	}
-	if (a.pegs.size() == 16)
+	else if (a.pegs.size() == 16)
 	{
 		do
 		{
