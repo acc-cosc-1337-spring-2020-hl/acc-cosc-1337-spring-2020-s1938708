@@ -299,15 +299,11 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "ex_11_02_library::@7c6b39c74d7c417f1a5d"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "ex_11_05_library::@515feef08d2f847b1529"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "ex_11_04_library::@7abc6a34784a3b4baf5a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ex_11_02_library::@7c6b39c74d7c417f1a5d"
 		},
 		{
 			"backtrace" : 2,
@@ -319,7 +315,7 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "ex_11_06_library::@556e8695f46f3d91bef7"
+			"id" : "ex_11_08_library::@cdb18a3ba04e1d66e41f"
 		},
 		{
 			"backtrace" : 2,
@@ -327,7 +323,11 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "ex_11_08_library::@cdb18a3ba04e1d66e41f"
+			"id" : "ex_11_05_library::@515feef08d2f847b1529"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ex_11_06_library::@556e8695f46f3d91bef7"
 		}
 	],
 	"id" : "ex_11_tests::@b17cab5059280372289d",

@@ -8,19 +8,17 @@ using std::cout; using std::cin; using std::string;
 
 int main()
 {
-	int choice = 0, game_choice;
+	vector<reference_wrapper<TicTacToe>> games{};
+	int choice = 0, game_choice, games_size = 0;
 	//TicTacToe_Manager game_manager;
 	do {
+
 		string x_prompt = "X's TURN \n";
 		string o_prompt = "Os TURN\n";
 		string first_player;
 
-
-		vector<reference_wrapper<TicTacToe>> games{};
-
 		cout << "Choose either \'3\' for TicTacToe 3 or \'4\' for TicTacToe 4: ";
 		cin >> game_choice;
-
 		if (game_choice == 3)
 		{
 			Tic_Tac_Toe_3 game3;
@@ -31,14 +29,20 @@ int main()
 			Tic_Tac_Toe_4 game4;
 			games.push_back(game4);
 		}
+		games_size = games.size();
+
+		for (int i = 0; i <= games.size(); i++)
+		{
+			cout << i;
+		}
 
 		bool first_player_success = false;
 		while (!first_player_success) {
 			try {
 				cout << "Enter X or O to choose the first player \n";
 				cin >> first_player;
-				games.back().get().start_game(first_player);
-				cout << games.back().get();
+				games[games_size - 1].get().start_game(first_player);
+				cout << games[games_size - 1];
 				first_player_success = true;
 			}
 			catch (Error &ex) {
@@ -47,8 +51,8 @@ int main()
 			}
 		}
 
-		while (!games.back().get().game_over()) {
-			if (games.back().get().get_player() == "X") {
+		while (!games[games_size - 1].get().game_over()) {
+			if (games[games_size - 1].get().get_player() == "X") {
 				cout << x_prompt;
 			}
 			else {
@@ -59,7 +63,7 @@ int main()
 			while (!mark_board_success) {
 
 				try {
-					cin >> games.back().get();
+					cin >> games[games_size - 1].get();
 					mark_board_success = true;
 
 				}

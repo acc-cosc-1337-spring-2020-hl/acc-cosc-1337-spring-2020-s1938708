@@ -182,16 +182,20 @@ TEST_CASE("Test win by first column 4")
 {
 	Tic_Tac_Toe_4 board;
 	board.start_game("X");
-	REQUIRE(board.game_over() == false); //yo!
+	REQUIRE(board.game_over() == false); 
 	board.mark_board(1);//X
 	REQUIRE(board.game_over() == false);
 	board.mark_board(2);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(4);//X
+	board.mark_board(5);//X
 	REQUIRE(board.game_over() == false);
-	board.mark_board(5);//O
+	board.mark_board(4);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(9);//X
 	REQUIRE(board.game_over() == false);
 	board.mark_board(7);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(13);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
 }
@@ -219,14 +223,18 @@ TEST_CASE("Test win by second column 4")
 	board.start_game("X");
 	REQUIRE(board.game_over() == false);
 	board.mark_board(2);//X
-	REQUIRE(board.game_over() == false); //yo!
+	REQUIRE(board.game_over() == false); 
 	board.mark_board(4);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(5);//X
+	board.mark_board(6);//X
 	REQUIRE(board.game_over() == false);
-	board.mark_board(6);//O
+	board.mark_board(7);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(8);//X
+	board.mark_board(10);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(8);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(14);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
 }
@@ -255,15 +263,43 @@ TEST_CASE("Test win by third column 4")
 	REQUIRE(board.game_over() == false);
 	board.mark_board(3);//X
 	REQUIRE(board.game_over() == false);
-	board.mark_board(4);//O
-	REQUIRE(board.game_over() == false); //yo
-	board.mark_board(6);//X
+	board.mark_board(1);//O
+	REQUIRE(board.game_over() == false); 
+	board.mark_board(7);//X
 	REQUIRE(board.game_over() == false);
-	board.mark_board(7);//O
+	board.mark_board(2);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(9);//X
+	board.mark_board(11);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(8);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(15);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
+
+}
+
+TEST_CASE("Test win by fourth column 4")
+{
+	Tic_Tac_Toe_4 board;
+	board.start_game("X");
+	REQUIRE(board.game_over() == false);
+	board.mark_board(4);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(1);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(8);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(2);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(12);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(3);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(16);//X
+	//X wins
+	REQUIRE(board.game_over() == true);
+
 }
 
 TEST_CASE("Test win by first row")
@@ -290,13 +326,17 @@ TEST_CASE("Test win by first row 4")
 	REQUIRE(board.game_over() == false);
 	board.mark_board(1);//X
 	REQUIRE(board.game_over() == false);
-	board.mark_board(4);//O
-	REQUIRE(board.game_over() == false); //yo
+	board.mark_board(6);//O
+	REQUIRE(board.game_over() == false);
 	board.mark_board(2);//X
 	REQUIRE(board.game_over() == false);
 	board.mark_board(8);//O
 	REQUIRE(board.game_over() == false);
 	board.mark_board(3);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(16);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(4);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
 }
@@ -323,15 +363,19 @@ TEST_CASE("Test win by second row 4")
 	Tic_Tac_Toe_4 board;
 	board.start_game("X");
 	REQUIRE(board.game_over() == false);
-	board.mark_board(4);//X
-	REQUIRE(board.game_over() == false);
-	board.mark_board(2);//O
-	REQUIRE(board.game_over() == false); //yo
 	board.mark_board(5);//X
 	REQUIRE(board.game_over() == false);
-	board.mark_board(7);//O
-	REQUIRE(board.game_over() == false);
+	board.mark_board(2);//O
+	REQUIRE(board.game_over() == false); 
 	board.mark_board(6);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(1);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(7);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(9);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(8);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
 }
@@ -358,15 +402,41 @@ TEST_CASE("Test win by third row 4")
 	Tic_Tac_Toe_4 board;
 	board.start_game("X");
 	REQUIRE(board.game_over() == false);
-	board.mark_board(7);//X
+	board.mark_board(9);//X
 	REQUIRE(board.game_over() == false);
 	board.mark_board(4);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(8);//X
-	REQUIRE(board.game_over() == false); //yo
+	board.mark_board(10);//X
+	REQUIRE(board.game_over() == false); 
 	board.mark_board(6);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(9);//X
+	board.mark_board(11);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(8);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(12);//X
+	//X wins
+	REQUIRE(board.game_over() == true);
+}
+
+TEST_CASE("Test win by fourth row 4")
+{
+	Tic_Tac_Toe_4 board;
+	board.start_game("X");
+	REQUIRE(board.game_over() == false);
+	board.mark_board(13);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(4);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(14);//X
+	REQUIRE(board.game_over() == false); 
+	board.mark_board(6);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(15);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(8);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(16);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
 }
@@ -396,11 +466,15 @@ TEST_CASE("Test win diagonally from top left 4")
 	REQUIRE(board.game_over() == false);
 	board.mark_board(4);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(5);//X
+	board.mark_board(6);//X
 	REQUIRE(board.game_over() == false); //yo
-	board.mark_board(6);//O
+	board.mark_board(7);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(9);//X
+	board.mark_board(11);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(12);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(16);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
 }
@@ -427,15 +501,19 @@ TEST_CASE("Test win diagonally from bottom left 4")
 	Tic_Tac_Toe_4 board;
 	board.start_game("X");
 	REQUIRE(board.game_over() == false);
-	board.mark_board(7);//X
+	board.mark_board(13);//X
 	REQUIRE(board.game_over() == false); //yo
-	board.mark_board(4);//O
+	board.mark_board(3);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(5);//X
+	board.mark_board(10);//X
 	REQUIRE(board.game_over() == false);
 	board.mark_board(6);//O
 	REQUIRE(board.game_over() == false);
-	board.mark_board(3);//X
+	board.mark_board(7);//X
+	REQUIRE(board.game_over() == false);
+	board.mark_board(11);//O
+	REQUIRE(board.game_over() == false);
+	board.mark_board(4);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
 }
