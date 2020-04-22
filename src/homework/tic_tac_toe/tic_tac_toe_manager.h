@@ -8,14 +8,14 @@
 
 using std::string; using std::reference_wrapper; using std::vector;
 
-class TicTacToe_Manager : public TicTacToe
+class TicTacToe_Manager
 {
 public:
 	void save_game(TicTacToe b);
 	friend std::ostream& operator<<(std::ostream& out, const TicTacToe_Manager& manager);
 	void get_winner_total(int& o, int& w, int& t);
 private:
-	vector<reference_wrapper<TicTacToe>> games;
+	vector<TicTacToe> games;
 	int o_win = { 0 };
 	int x_win = { 0 };
 	int tie = { 0 };

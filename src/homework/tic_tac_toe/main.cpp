@@ -3,97 +3,68 @@
 #include "tic_tac_toe_4.h"
 #include "tic_tac_toe_manager.h"
 #include <iostream>
+#include <functional>
 
 using std::cout; using std::cin; using std::string;
 
 int main()
 {
 	vector<reference_wrapper<TicTacToe>> games{};
-	int choice = 0, game_choice, games_size = 0;
-	//TicTacToe_Manager game_manager;
-	do {
 
-		string x_prompt = "X's TURN \n";
-		string o_prompt = "Os TURN\n";
-		string first_player;
+	using std::cout; using std::cin;
+	string player;
+	TicTacToe_Manager Manage;
+	int choice, game_choice;
 
-		cout << "Choose either \'3\' for TicTacToe 3 or \'4\' for TicTacToe 4: ";
+	cout << "Tic Tac Toe by Simon.";
+
+	do
+	{
+		cout << "\TicTacToe 3 or 4? ";
 		cin >> game_choice;
+		Tic_Tac_Toe_3 game3;
+		Tic_Tac_Toe_4 game4;
+
 		if (game_choice == 3)
 		{
-			Tic_Tac_Toe_3 game3;
 			games.push_back(game3);
 		}
 		else if (game_choice == 4)
 		{
-			Tic_Tac_Toe_4 game4;
 			games.push_back(game4);
 		}
-		games_size = games.size();
 
-		for (int i = 0; i <= games.size(); i++)
+		reference_wrapper<TicTacToe> game = games.back();
+
+		do
 		{
-			cout << i;
-		}
-
-		bool first_player_success = false;
-		while (!first_player_success) {
-			try {
-				cout << "Enter X or O to choose the first player \n";
-				cin >> first_player;
-				games[games_size - 1].get().start_game(first_player);
-				cout << games[games_size - 1];
-				first_player_success = true;
+			cout << "\nEnter 'X' or 'O' to start the game: ";
+			cin >> player;
+			try
+			{
+				game.get().start_game(player);
+				break;
 			}
-			catch (Error &ex) {
-				cout << ex.get_message() << "\n";
-				cout << "Try again \n";
+			catch (Error e)
+			{
+				cout << e.get_message();
 			}
-		}
+		} while (game.get().get_player() != "X" || game.get().get_player() != "O");
 
-		while (!games[games_size - 1].get().game_over()) {
-			if (games[games_size - 1].get().get_player() == "X") {
-				cout << x_prompt;
-			}
-			else {
-				cout << o_prompt;
-			}
-			bool mark_board_success = false;
+		cin >> game.get();
 
-			while (!mark_board_success) {
+		cout << "The winner is: " << game.get().get_winner();
 
-				try {
-					cin >> games[games_size - 1].get();
-					mark_board_success = true;
+		Manage.save_game(game.get());
 
-				}
-				catch (Error &ex) {
-					cout << ex.get_message() << "\n";
-					cout << "try again \n";
-				}
 
-				cout << games.back().get();
-
-				if (games.back().get().game_over()) {
-					cout << "winner :" << games.back().get().get_winner() << "\n";
-				}
-
-			}
-
-			//mark_board_success = false;
-
-		}
-		//game_manager.save_game(game);
-		//cout << game_manager;
-		cout << "\n";
-		cout << "Enter 0 to continue the game \n";
+		cout << "\nPress 0 to continue playing: ";
 		cin >> choice;
-		//if (choice != 0) {
-		//	cout << game_manager;
-		//}
-		cout << "\n";
-
 	} while (choice == 0);
+
+	cout << Manage;
 
 	return 0;
 }
+
+

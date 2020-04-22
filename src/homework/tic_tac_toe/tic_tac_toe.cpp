@@ -140,7 +140,7 @@ std::ostream& operator<<(std::ostream& out, const TicTacToe& a)
 	{
 		for (int i = 0; i < 16; i += 4)
 		{
-			cout << a.pegs[i] << "|" << a.pegs[i + 1] << "|" << a.pegs[i + 2] << a.pegs[i + 3] << "\n";
+			cout << a.pegs[i] << "|" << a.pegs[i + 1] << "|" << a.pegs[i + 2] << "|" << a.pegs[i + 3] << "\n";
 		}
 		out << "\n";
 	}
