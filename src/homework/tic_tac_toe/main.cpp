@@ -50,7 +50,7 @@ int main()
 				cout << e.get_message();
 			}
 		} while (game.get().get_player() != "X" || game.get().get_player() != "O");
-
+		cout << game.get();
 		cin >> game.get();
 
 		cout << "The winner is: " << game.get().get_winner();
