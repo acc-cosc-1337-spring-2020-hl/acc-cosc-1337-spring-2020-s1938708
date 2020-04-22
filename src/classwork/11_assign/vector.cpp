@@ -1,8 +1,9 @@
 #include "vector.h"
-
+#include<iostream>
 Vector::Vector(size_t sz) 
 	: size{ sz }, nums{new int[sz]}
 {
+	std::cout << "Allocate memory";
 	for (size_t i = 0; i < sz; i++)
 	{
 		nums[i] = 0;
@@ -16,4 +17,15 @@ Vector::Vector(const Vector& v)
 	{
 		nums[i] = v[i]; 
 	}
+}
+
+Vector::~Vector()
+{
+	std::cout << "\nRelease Memory";
+	delete[] nums;
+}
+
+void use_vector()
+{
+	Vector v(3);
 }

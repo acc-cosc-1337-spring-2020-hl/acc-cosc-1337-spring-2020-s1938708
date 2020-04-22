@@ -5,13 +5,14 @@
 #include"tic_tac_toe.h"
 #include<vector>
 #include<iostream>
+#include<memory>
 
-using std::string; using std::reference_wrapper; using std::vector;
+using std::string; using std::vector; using std::unique_ptr; 
 
 class TicTacToe_Manager
 {
 public:
-	void save_game(TicTacToe b);
+	void save_game(unique_ptr<TicTacToe> game);
 	friend std::ostream& operator<<(std::ostream& out, const TicTacToe_Manager& manager);
 	void get_winner_total(int& o, int& w, int& t);
 private:

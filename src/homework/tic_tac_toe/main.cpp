@@ -9,32 +9,32 @@ using std::cout; using std::cin; using std::string;
 
 int main()
 {
-	vector<reference_wrapper<TicTacToe>> games{};
+	vector<unique_ptr<TicTacToe>> games{};
 
 	using std::cout; using std::cin;
 	string player;
-	TicTacToe_Manager Manage;
+	unique_ptr<TicTacToe_Manager> Manage;
 	int choice, game_choice;
 
 	cout << "Tic Tac Toe by Simon.";
 
 	do
 	{
-		cout << "\TicTacToe 3 or 4? ";
+		cout << "\nTicTacToe 3 or 4? ";
 		cin >> game_choice;
 		Tic_Tac_Toe_3 game3;
 		Tic_Tac_Toe_4 game4;
 
 		if (game_choice == 3)
 		{
-			games.push_back(game3);
+			games ->push_back(game3);
 		}
 		else if (game_choice == 4)
 		{
-			games.push_back(game4);
+			games -> push_back(game4);
 		}
 
-		reference_wrapper<TicTacToe> game = games.back();
+		unique_ptr<TicTacToe> game = games -> back();
 
 		do
 		{
@@ -42,7 +42,7 @@ int main()
 			cin >> player;
 			try
 			{
-				game.get().start_game(player);
+				game -> start_game(player);
 				break;
 			}
 			catch (Error e)
@@ -55,7 +55,7 @@ int main()
 
 		cout << "The winner is: " << game.get().get_winner();
 
-		Manage.save_game(game.get());
+		Manage -> save_game(game.get());
 
 
 		cout << "\nPress 0 to continue playing: ";
