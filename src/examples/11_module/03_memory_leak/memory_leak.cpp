@@ -6,4 +6,6 @@ void memory_leak()
 	//some other function code
 
 	//we forget to delete and point to nullptr
+	delete ptr_num;
+	ptr_num = nullptr;
 }

@@ -7,16 +7,16 @@
 #include<iostream>
 #include<memory>
 
-using std::string; using std::vector; using std::unique_ptr; 
+using std::string; using std::vector; using std::unique_ptr; using std::make_unique;
 
 class TicTacToe_Manager
 {
 public:
-	void save_game(unique_ptr<TicTacToe> game);
+	void save_game(unique_ptr<TicTacToe>& game);
 	friend std::ostream& operator<<(std::ostream& out, const TicTacToe_Manager& manager);
 	void get_winner_total(int& o, int& w, int& t);
 private:
-	vector<TicTacToe> games;
+	vector<unique_ptr<TicTacToe>> games{};
 	int o_win = { 0 };
 	int x_win = { 0 };
 	int tie = { 0 };

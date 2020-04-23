@@ -11,6 +11,7 @@ int main()
 
 	delete ptr_num;
 	ptr_num = nullptr;
+	cout << *ptr_num;
 
 	return 0;
 }

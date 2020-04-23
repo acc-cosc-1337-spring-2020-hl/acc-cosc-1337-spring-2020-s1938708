@@ -4,7 +4,9 @@
 
 int main() 
 {
-	use_vector();
+	Vector v1(3);
+	Vector v2(3);
+	v2 = v1;
 
 	return 0;
 }

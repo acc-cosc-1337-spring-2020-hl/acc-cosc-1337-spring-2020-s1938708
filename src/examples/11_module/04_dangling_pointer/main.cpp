@@ -7,6 +7,7 @@ int main()
 	int* ptr = ptr_num;
 	std::cout << *ptr << "\n";
 	delete ptr_num;
+	//delete ptr; //Needed to remove the dangling ptr.
 	std::cout << *ptr;
 	ptr_num = nullptr;
 	return 0;

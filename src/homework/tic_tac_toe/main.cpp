@@ -22,19 +22,19 @@ int main()
 	{
 		cout << "\nTicTacToe 3 or 4? ";
 		cin >> game_choice;
-		Tic_Tac_Toe_3 game3;
-		Tic_Tac_Toe_4 game4;
 
 		if (game_choice == 3)
 		{
-			games ->push_back(game3);
+			unique_ptr<TicTacToe> game3 = make_unique<Tic_Tac_Toe_3>(3);
+			games.push_back(game3);
 		}
 		else if (game_choice == 4)
 		{
-			games -> push_back(game4);
+			unique_ptr<TicTacToe> game4 = make_unique<Tic_Tac_Toe_4>(4);
+			games.push_back(game4);
 		}
 
-		unique_ptr<TicTacToe> game = games -> back();
+		
 
 		do
 		{
@@ -42,27 +42,27 @@ int main()
 			cin >> player;
 			try
 			{
-				game -> start_game(player);
+				games.back()->start_game(player);
 				break;
 			}
 			catch (Error e)
 			{
 				cout << e.get_message();
 			}
-		} while (game.get().get_player() != "X" || game.get().get_player() != "O");
-		cout << game.get();
-		cin >> game.get();
+		} while (games.back()->get_player() != "X" || games.back()->get_player() != "O");
+		cout << games.back();
+		cin >> *games.back();
 
-		cout << "The winner is: " << game.get().get_winner();
+		cout << "The winner is: " << games.back()->get_winner();
 
-		Manage -> save_game(game.get());
+		Manage->save_game(games.back());
 
 
 		cout << "\nPress 0 to continue playing: ";
 		cin >> choice;
 	} while (choice == 0);
 
-	cout << Manage;
+	cout << *Manage;
 
 	return 0;
 }
