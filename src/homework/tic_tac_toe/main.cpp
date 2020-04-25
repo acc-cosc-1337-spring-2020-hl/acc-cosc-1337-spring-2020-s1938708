@@ -9,15 +9,13 @@ using std::cout; using std::cin; using std::string;
 
 int main()
 {
-	vector<unique_ptr<TicTacToe>> games{};
-
 	using std::cout; using std::cin;
 	string player;
-	unique_ptr<TicTacToe_Manager> Manage;
+	unique_ptr<TicTacToe_Manager> Manage = make_unique<TicTacToe_Manager>();
 	int choice, game_choice;
 
 	cout << "Tic Tac Toe by Simon.";
-
+	unique_ptr<TicTacToe> game;
 	do
 	{
 		cout << "\nTicTacToe 3 or 4? ";
@@ -25,13 +23,11 @@ int main()
 
 		if (game_choice == 3)
 		{
-			unique_ptr<TicTacToe> game3 = make_unique<Tic_Tac_Toe_3>(3);
-			games.push_back(game3);
+			game = make_unique<Tic_Tac_Toe_3>();
 		}
 		else if (game_choice == 4)
 		{
-			unique_ptr<TicTacToe> game4 = make_unique<Tic_Tac_Toe_4>(4);
-			games.push_back(game4);
+			game = make_unique<Tic_Tac_Toe_4>();
 		}
 
 		
@@ -42,20 +38,19 @@ int main()
 			cin >> player;
 			try
 			{
-				games.back()->start_game(player);
-				break;
+				cin >> *game;
+				cout << *game;
 			}
 			catch (Error e)
 			{
 				cout << e.get_message();
 			}
-		} while (games.back()->get_player() != "X" || games.back()->get_player() != "O");
-		cout << games.back();
-		cin >> *games.back();
+		} while (!game->game_over());
+		
 
-		cout << "The winner is: " << games.back()->get_winner();
+		cout << "The winner is: " << game->get_winner();
 
-		Manage->save_game(games.back());
+		Manage->save_game(game);
 
 
 		cout << "\nPress 0 to continue playing: ";
