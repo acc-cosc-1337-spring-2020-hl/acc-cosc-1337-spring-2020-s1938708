@@ -39,7 +39,18 @@ int main()
 			game = make_unique<Tic_Tac_Toe_4>(4);
 		}
 
+		while (!(player == "O" || player == "X"))
+		{
+			try {
+				cout << "Please choose one: 'X' or 'O'\n";
+				cin >> player;
+				game->start_game(player);
+			}
+			catch (Error e) {
 
+				cout << e.get_message();
+			}
+		}
 
 		do
 		{
