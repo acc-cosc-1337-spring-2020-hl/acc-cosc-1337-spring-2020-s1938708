@@ -4,7 +4,7 @@
 
 void TicTacToe_Manager::save_game(unique_ptr<TicTacToe>& game)
 {
-	games.push_back(std::move(game));
+	game_hold.push_back(std::move(game));
 	update_winner_count(game->get_winner());
 	get_winner_total(x_win, o_win, tie);
 }
@@ -24,7 +24,7 @@ void TicTacToe_Manager::update_winner_count(string winner)
 std::ostream& operator<<(std::ostream& out, const TicTacToe_Manager& manager)
 {
 	out << "History of played games:\n";
-	for (auto& vector_manager : manager.games)
+	for (auto& vector_manager : manager.game_hold)
 	{
 		cout << vector_manager;
 		

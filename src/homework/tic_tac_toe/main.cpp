@@ -3,7 +3,6 @@
 #include "tic_tac_toe_4.h"
 #include "tic_tac_toe_manager.h"
 #include <iostream>
-#include <functional>
 
 using std::cout; using std::cin; using std::string;
 
@@ -13,7 +12,7 @@ int main()
 
 	using std::cout; using std::cin;
 	string player;
-	unique_ptr<TicTacToe_Manager> Manage;
+	unique_ptr<TicTacToe_Manager> Manage = make_unique<TicTacToe_Manager>();
 	int choice, game_choice;
 
 	cout << "Tic Tac Toe by Simon.";
@@ -26,12 +25,12 @@ int main()
 		if (game_choice == 3)
 		{
 			unique_ptr<TicTacToe> game3 = make_unique<Tic_Tac_Toe_3>(3);
-			games.push_back(game3);
+			games.push_back(std::move(game3));
 		}
 		else if (game_choice == 4)
 		{
 			unique_ptr<TicTacToe> game4 = make_unique<Tic_Tac_Toe_4>(4);
-			games.push_back(game4);
+			games.push_back(std::move(game4));
 		}
 
 		
@@ -50,8 +49,20 @@ int main()
 				cout << e.get_message();
 			}
 		} while (games.back()->get_player() != "X" || games.back()->get_player() != "O");
-		cout << games.back();
-		cin >> *games.back();
+
+		cout << *games.back();
+		do
+		{
+			try
+			{
+				cin >> *games.back();
+			}
+			catch (Error e)
+			{
+				cout << e.get_message();
+			}
+
+		} while (!games.back()->game_over());
 
 		cout << "The winner is: " << games.back()->get_winner();
 
