@@ -7,18 +7,8 @@
 
 using std::cout; using std::cin; using std::string;
 
-#include "tic_tac_toe.h"
-#include "tic_tac_toe_3.h"
-#include "tic_tac_toe_4.h"
-#include "tic_tac_toe_manager.h"
-#include <iostream>
-#include <functional>
-
-using std::cout; using std::cin; using std::string;
-
 int main()
 {
-	using std::cout; using std::cin;
 	string player;
 	unique_ptr<TicTacToe_Manager> Manage = make_unique<TicTacToe_Manager>();
 	int choice, game_choice;
