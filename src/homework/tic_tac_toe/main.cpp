@@ -3,33 +3,34 @@
 #include "tic_tac_toe_4.h"
 #include "tic_tac_toe_manager.h"
 #include <iostream>
-#include <functional>
 
 using std::cout; using std::cin; using std::string;
 
 int main()
 {
-	string player;
+	//string player;
 	unique_ptr<TicTacToe_Manager> Manage = make_unique<TicTacToe_Manager>();
 	int choice, game_choice;
 
 	cout << "Tic Tac Toe by Simon.";
-	unique_ptr<TicTacToe> game;
+	//unique_ptr<TicTacToe> game;
 	do
 	{
+		string player;
+		unique_ptr<TicTacToe> game;
 		cout << "\nTicTacToe 3 or 4? ";
 		cin >> game_choice;
 
 		if (game_choice == 3)
 		{
-			game = make_unique<Tic_Tac_Toe_3>();
+			game = make_unique<Tic_Tac_Toe_3>(3);
 		}
 		else if (game_choice == 4)
 		{
-			game = make_unique<Tic_Tac_Toe_4>();
+			game = make_unique<Tic_Tac_Toe_4>(4);
 		}
 
-		while (!(player == "O" || player == "X"))
+		while (!(player == "O" || player == "X")) //This while loop catches incorrect input for me and doesn't need a break;
 		{
 			try {
 				cout << "Please choose one: 'X' or 'O'\n";
@@ -44,8 +45,17 @@ int main()
 
 		do
 		{
-			cout << "\nEnter 'X' or 'O' to start the game: ";
-			cin >> player;
+			/*try
+			{
+				cout << "\nEnter 'X' or 'O' to start the game: "; //This previous code no longer works because it breaks the whole loop.
+				cin >> player;
+				break;
+			}
+			catch(Error e)
+			{
+				cout << e.get_message();
+			}*/
+
 			try
 			{
 				cin >> *game;
