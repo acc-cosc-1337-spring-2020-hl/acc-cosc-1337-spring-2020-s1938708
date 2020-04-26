@@ -7,7 +7,7 @@
 class Tic_Tac_Toe_3 : public TicTacToe
 {
 public:
-	Tic_Tac_Toe_3() : TicTacToe(3) {}
+	Tic_Tac_Toe_3(int a) : TicTacToe(3) {}
 
 private:
 	bool check_column_win();
