@@ -9,7 +9,6 @@ using std::cout; using std::cin; using std::string;
 
 int main()
 {
-	using std::cout; using std::cin;
 	string player;
 	unique_ptr<TicTacToe_Manager> Manage = make_unique<TicTacToe_Manager>();
 	int choice, game_choice;
@@ -30,7 +29,18 @@ int main()
 			game = make_unique<Tic_Tac_Toe_4>();
 		}
 
-		
+		while (!(player == "O" || player == "X"))
+		{
+			try {
+				cout << "Please choose one: 'X' or 'O'\n";
+				cin >> player;
+				game->start_game(player);
+			}
+			catch (Error e) {
+
+				cout << e.get_message();
+			}
+		}
 
 		do
 		{
@@ -46,7 +56,7 @@ int main()
 				cout << e.get_message();
 			}
 		} while (!game->game_over());
-		
+
 
 		cout << "The winner is: " << game->get_winner();
 
@@ -61,5 +71,3 @@ int main()
 
 	return 0;
 }
-
-
