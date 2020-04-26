@@ -7,6 +7,15 @@
 
 using std::cout; using std::cin; using std::string;
 
+#include "tic_tac_toe.h"
+#include "tic_tac_toe_3.h"
+#include "tic_tac_toe_4.h"
+#include "tic_tac_toe_manager.h"
+#include <iostream>
+#include <functional>
+
+using std::cout; using std::cin; using std::string;
+
 int main()
 {
 	using std::cout; using std::cin;
@@ -23,14 +32,14 @@ int main()
 
 		if (game_choice == 3)
 		{
-			game = make_unique<Tic_Tac_Toe_3>();
+			game = make_unique<Tic_Tac_Toe_3>(3);
 		}
 		else if (game_choice == 4)
 		{
-			game = make_unique<Tic_Tac_Toe_4>();
+			game = make_unique<Tic_Tac_Toe_4>(4);
 		}
 
-		
+
 
 		do
 		{
@@ -46,7 +55,7 @@ int main()
 				cout << e.get_message();
 			}
 		} while (!game->game_over());
-		
+
 
 		cout << "The winner is: " << game->get_winner();
 
@@ -61,5 +70,4 @@ int main()
 
 	return 0;
 }
-
 

@@ -16,7 +16,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, const TicTacToe_Manager& manager);
 	void get_winner_total(int& o, int& w, int& t);
 private:
-	vector<unique_ptr<TicTacToe>> game_hold{};
+	vector<unique_ptr<TicTacToe>> games{};
 	int o_win = { 0 };
 	int x_win = { 0 };
 	int tie = { 0 };
