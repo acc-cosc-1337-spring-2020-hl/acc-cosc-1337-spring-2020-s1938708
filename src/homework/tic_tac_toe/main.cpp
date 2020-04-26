@@ -31,11 +31,22 @@ int main()
 		}
 
 		
+		while (!(player == "X" || player == "O")) 
+		{
+			try
+			{
+				cout << "\nEnter 'X' or 'O' to start the game: ";
+				cin >> player;
+				game->start_game(player);
+			}
+			catch (Error e) 
+			{
+				cout << e.get_message();
+			}
+		}
 
 		do
 		{
-			cout << "\nEnter 'X' or 'O' to start the game: ";
-			cin >> player;
 			try
 			{
 				cin >> *game;
