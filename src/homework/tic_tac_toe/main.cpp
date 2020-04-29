@@ -8,12 +8,12 @@ using std::cout; using std::cin; using std::string;
 
 int main()
 {
-	//string player;
+	//string player; //Player is never reinitialized and makes the code not work outside loop
 	unique_ptr<TicTacToe_Manager> Manage = make_unique<TicTacToe_Manager>();
 	int choice, game_choice;
 
 	cout << "Tic Tac Toe by Simon.";
-	//unique_ptr<TicTacToe> game;
+	//unique_ptr<TicTacToe> game; //game is never reinitialized because it's outside the loop.
 	do
 	{
 		string player;

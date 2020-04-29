@@ -10,6 +10,7 @@ using std::string; using std::cout;
 class TicTacToe
 {
 public:
+	TicTacToe(std::vector<string> p, string win);
 	TicTacToe(int size) : pegs{ size * size, " " } {}
 	bool game_over();
 	void start_game(string first_player);
@@ -18,6 +19,7 @@ public:
 	string get_winner() const;
 	friend std::ostream& operator<<(std::ostream& out, const TicTacToe& a);
 	friend std::istream& operator>>(std::istream& in, TicTacToe& a);
+	void get_pegs(const std::vector<string> p);
 
 protected:
 	std::vector<std::string> pegs{};

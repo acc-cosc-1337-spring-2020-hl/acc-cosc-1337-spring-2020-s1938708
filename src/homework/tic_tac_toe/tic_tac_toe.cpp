@@ -1,6 +1,11 @@
 //cpp
 #include"tic_tac_toe.h"
 
+TicTacToe::TicTacToe(std::vector<string> p, string win)
+{
+	string l = win;
+}
+
 bool TicTacToe::game_over()
 {
 	if (check_row_win() == true)
@@ -194,6 +199,11 @@ std::istream& operator>>(std::istream& in, TicTacToe& a) //I took out the const 
 }
 
 string TicTacToe::get_winner() const { return winner; }
+
+void TicTacToe::get_pegs(const std::vector<string> p)
+{
+
+}
 
 Error::Error(string msg) : message(msg) {};
 
